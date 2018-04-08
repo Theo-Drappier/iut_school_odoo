@@ -5,11 +5,11 @@ from odoo import models, fields, api
 
 class IutClass(models.Model):
 
-    # region Private fields
+    # region Private attributes
     _name = 'iut.class'
     # endregion
 
-    # region Public fields
+    # region Declaration fields
     name = fields.Char(string='Class Name')
     level = fields.Selection(
         string='Level',

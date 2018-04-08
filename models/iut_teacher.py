@@ -10,6 +10,6 @@ class IutTeacher(models.Model):
     _inherit = 'res.partner'
     # endregion
 
-    # region Public attributes
+    # region Declaration fields
     class_id = fields.Many2one(string='Class', comodel_name='iut.class')
     # endregion
