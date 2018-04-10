@@ -25,6 +25,7 @@ class IutStudent(models.Model):
     # region Declaration Methods
     @api.depends('birthdate')
     def _compute_age(self):
-        today = datetime.today()
-        self.age = relativedelta(today, datetime.strptime(self.birthdate, '%Y-%m-%d')).years
+        if self.birthdate:
+            today = datetime.today()
+            self.age = relativedelta(today, datetime.strptime(self.birthdate, '%Y-%m-%d')).years
     # endregion

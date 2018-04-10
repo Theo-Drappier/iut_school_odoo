@@ -3,18 +3,20 @@
     <data>
         <record model="ir.ui.view" id="view_form_iut_teacher">
             <field name="name">iut.teacher.form</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
             <field name="model">iut.teacher</field>
-            <field name="type">form</field>
+            <field name="mode">primary</field>
             <field name="arch" type="xml">
-                <form>
-                    <sheet>
-                        <group>
-                            <field name="name"/>
-                            <field name="warrantly_delay_month" />
-                            <field name="support_phone" />
-                        </group>
-                    </sheet>
-                </form>
+                <notebook position="inside">
+                    <page name="class" string="Class">
+                        <field name="class_ids">
+                            <tree>
+                                <field name="name"/>
+                                <field name="level"/>
+                            </tree>
+                        </field>
+                    </page>
+                </notebook>
             </field>
         </record>
 
@@ -30,13 +32,13 @@
         </record>
 
         <record model="ir.ui.view" id="view_tree_iut_teacher">
-            <field name="name">iut.teacher.list</field>
+            <field name="name">iut.teacher.tree</field>
+            <field name="inherit_id" ref="base.view_partner_tree"/>
             <field name="model">iut.teacher</field>
-            <field name="type">tree</field>
+            <field name="mode">primary</field>
             <field name="arch" type="xml">
-                <tree>
-                    <field name="name"/>
-                    <field name="support_phone"/>
+                <tree position="inside">
+                    <field name="class_ids"/>
                 </tree>
             </field>
         </record>

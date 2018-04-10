@@ -31,6 +31,12 @@ class IutClass(models.Model):
         inverse_name='class_id'
     )
 
+    schedule_ids = fields.One2many(
+        string='Schedules',
+        comodel_name='iut.schedule',
+        inverse_name='class_id'
+    )
+
     student_nb = fields.Integer(
         string='Number of students',
         compute='_compute_nb_students'

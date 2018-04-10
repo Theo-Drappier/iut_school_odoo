@@ -11,5 +11,11 @@ class IutTeacher(models.Model):
     # endregion
 
     # region Declaration fields
-    class_id = fields.Many2one(string='Class', comodel_name='iut.class')
+    class_ids = fields.One2many(string='Class', comodel_name='iut.class', inverse_name='teacher_id')
+    # endregion
+
+    # region Methods
+    @api.depends('is_company', 'parent_id.commercial_partner_id')
+    def _compute_commercial_partner(self):
+        pass
     # endregion

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Top menu item -->
+        <menuitem name="Lycée" id="menu_model_parc" sequence="90"/>
+
+       <!-- Menu Gestion Parc -->
+        <menuitem id="menu_modele_parc_gestion" parent="menu_model_parc"
+                  name="Configuration" sequence="16"/>
+
+        <menuitem id="menu_modele_class" parent="menu_modele_parc_gestion"
+                  action="action_iut_class" sequence="20" name="Class"/>
+
+        <menuitem id="menu_modele_course" parent="menu_modele_parc_gestion"
+                  action="action_iut_course" sequence="30" name="Courses"/>
+
+        <menuitem id="menu_modele_schedule" parent="menu_modele_parc_gestion"
+                  action="action_iut_schedule" sequence="40" name="Schedule"/>
+
+        <menuitem id="menu_modele_student" parent="menu_modele_parc_gestion"
+                  action="action_iut_student" sequence="50" name="Students"/>
+
+        <menuitem id="menu_modele_teacher" parent="menu_modele_parc_gestion"
+                  action="action_iut_teacher" sequence="60" name="Teachers"/>
+    </data>
+</odoo>
