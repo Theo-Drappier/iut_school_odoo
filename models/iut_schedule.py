@@ -16,7 +16,7 @@ class IutSchedule(models.Model):
 
     room = fields.Char(string='Class room')
 
-    class_id = fields.Many2one(string='Class')
+    class_id = fields.Many2one(string='Class', comodel_name='iut.class')
 
-    course_id = fields.Many2one(string='Course')
+    course_id = fields.Many2one(string='Course', comodel_name='iut.course')
     # endregion

@@ -10,8 +10,8 @@
                     <sheet>
                         <div class="oe_title">
                             <h1>
-                                <field name="firstname"/>
-                                <field name="lastname" />
+                                <field name="firstname" placeholder="Firstname"/>
+                                <field name="lastname" placeholder="Lastname"/>
                             </h1>
                         </div>
                         <group>

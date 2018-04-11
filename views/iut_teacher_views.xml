@@ -9,7 +9,7 @@
             <field name="arch" type="xml">
                 <notebook position="inside">
                     <page name="class" string="Class">
-                        <field name="class_ids">
+                        <field name="class_ids" widget="many2many_list">
                             <tree>
                                 <field name="name"/>
                                 <field name="level"/>

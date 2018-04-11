@@ -41,6 +41,14 @@ class IutClass(models.Model):
         string='Number of students',
         compute='_compute_nb_students'
     )
+
+    _sql_constraints = [
+        (
+            'teacher_unique',
+            'unique(teacher_id)',
+            'A teacher must be only assign to one class !'
+        )
+    ]
     # endregion
 
     # region Methods
